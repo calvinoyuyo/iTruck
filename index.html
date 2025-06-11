@@ -3,81 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iTruck Kenya</title>
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <title>iTruck - Cargo Listings</title>
-
-  <style>
-    #background-video {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
-      object-fit: cover;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: rgba(255, 255, 255, 0.85);
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <!-- Background Video -->
   <video autoplay muted loop id="background-video">
-    <source src="855979-hd_1920_1080_30fps.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
+    <source src="855979-hd_1920_1080_30fps.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
   </video>
 
-  <!-- Hero Section -->
-  <section class="bg-dark text-white p-5 text-center">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <h1 class="display-4">iTruck Kenya</h1>
-      <p class="lead">Smart, reliable cargo movement across Kenya</p>
+      <a class="navbar-brand" href="#">iTruck</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Logistics</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
     </div>
-  </section>
+  </nav>
 
-  <!-- Cargo Form -->
-  <section class="p-5 bg-light">
+  <!-- Hero Section -->
+  <section class="hero text-white">
     <div class="container">
-      <h2 class="mb-4">Request a Cargo Pickup</h2>
+      <div class="row">
+        <div class="col-md-8">
+          <h1 class="display-4">iTruck Kenya</h1>
+          <p class="lead">Bridging Truck Owners and Cargo Owners Seamlessly Across Kenya.</p>
+          <ul>
+            <li>Fast & reliable cargo movement</li>
+            <li>Nationwide coverage</li>
+            <li>Secure and trackable operations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form on bottom right -->
+    <div class="form-box bg-light text-dark p-4 rounded shadow">
+      <h5 class="mb-3">Request a Cargo Pickup</h5>
       <form id="cargoForm">
-        <div class="mb-3">
-          <label for="from" class="form-label">From</label>
-          <input type="text" class="form-control" id="from" required>
-        </div>
-        <div class="mb-3">
-          <label for="to" class="form-label">To</label>
-          <input type="text" class="form-control" id="to" required>
-        </div>
-        <div class="mb-3">
-          <label for="cargo" class="form-label">Cargo Description</label>
-          <input type="text" class="form-control" id="cargo" required>
-        </div>
-        <div class="mb-3">
-          <label for="contact" class="form-label">Your Contact</label>
-          <input type="text" class="form-control" id="contact" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit Request</button>
+        <input type="text" class="form-control mb-2" id="from" placeholder="From" required />
+        <input type="text" class="form-control mb-2" id="to" placeholder="To" required />
+        <input type="text" class="form-control mb-2" id="cargo" placeholder="Cargo Description" required />
+        <input type="text" class="form-control mb-3" id="contact" placeholder="Your Contact" required />
+        <button type="submit" class="btn btn-primary w-100">Submit Request</button>
       </form>
     </div>
   </section>
 
-  <!-- Cargo Listings -->
-  <section class="p-5">
-    <div class="container">
-      <h2 class="mb-4">Available Cargo Jobs</h2>
-      <div id="jobs-container" class="row"></div>
+  <!-- Testimonials Section -->
+  <section class="bg-light py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">What People Say</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="paul-hanaoka-D-qq7W751vs-unsplash.jpeg" class="rounded-circle mb-2" width="120" height="120" alt="Paul" />
+          <p><strong>Paul Mwangi</strong><br>"This platform helped me find work consistently for my truck."</p>
+        </div>
+        <div class="col-md-4">
+          <img src="ashley-nicole-ts_lc48vFVM-unsplash.jpeg" class="rounded-circle mb-2" width="120" height="120" alt="Ashley" />
+          <p><strong>Ashley Njeri</strong><br>"We use iTruck for all our local product deliveries. Great service!"</p>
+        </div>
+        <div class="col-md-4">
+          <img src="christina-wocintechchat-com-rg1y72eKw6o-unsplash.jpeg" class="rounded-circle mb-2" width="120" height="120" alt="Christina" />
+          <p><strong>Christina Odhiambo</strong><br>"Efficient, transparent, and affordable. iTruck is the future."</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Bootstrap JS (last) + your script -->
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-4">
+    <p class="mb-0">&copy; 2025 iTruck Kenya. Bridging Transport and Trade.</p>
+    <p class="small">Built with ❤️ in Kenya | info@itruck.co.ke | +254 712 345 678</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>

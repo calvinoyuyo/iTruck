@@ -1,15 +1,28 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 2rem;
-  background-color: #f9f9f9;
+/* Background video styling */
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
-h1 {
-  color: #0077cc;
+
+/* Hero section adjustments */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
-.job-card {
-  background: white;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-left: 4px solid #0077cc;
+
+/* Bottom right form */
+.form-box {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 300px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.95);
 }
