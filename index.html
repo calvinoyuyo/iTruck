@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iTruck - Cargo Listings</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra styles for the video */
+    #background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: rgba(255, 255, 255, 0.85); /* fallback for contrast */
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Looping Truck Video -->
+  <video autoplay muted loop id="background-video">
+    <source src="855979-hd_1920_1080_30fps.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Page Content -->
+  <div class="content">
+    <h1>iTruck Cargo Jobs</h1>
+    <div id="jobs-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

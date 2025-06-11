@@ -1,0 +1,15 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 2rem;
+  background-color: #f9f9f9;
+}
+h1 {
+  color: #0077cc;
+}
+.job-card {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-left: 4px solid #0077cc;
+}
