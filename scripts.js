@@ -1,4 +1,4 @@
-const API_URL = 'https://sheetdb.io/api/v1/YOUR_API_KEY'; // Replace with your own SheetDB API
+const API_URL = 'https://sheetdb.io/api/v1/bx7655veox10d';
 
 fetch(API_URL)
   .then(response => response.json())
