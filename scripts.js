@@ -25,3 +25,39 @@ fetch(API_URL)
       container.appendChild(jobCard);
     });
   });
+// Form Submission
+document.getElementById("cargoForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // prevent page reload
+
+  const from = document.getElementById("from").value;
+  const to = document.getElementById("to").value;
+  const cargo = document.getElementById("cargo").value;
+  const contact = document.getElementById("contact").value;
+
+  const jobData = {
+    job_id: Date.now(), // use timestamp as unique ID
+    from: from,
+    to: to,
+    cargo: cargo,
+    contact: contact,
+    status: "Pending"
+  };
+
+  fetch(API_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ data: [jobData] })
+  })
+    .then(response => {
+      if (response.ok) {
+        alert("✅ Cargo job submitted!");
+        document.getElementById("cargoForm").reset();
+      } else {
+        alert("❌ Submission failed. Try again.");
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("⚠️ Network or API error.");
+    });
+});
